@@ -1,6 +1,5 @@
 <?php
-// Aquí no hay necesidad de conexión a base de datos
-?>
+
 
 <!DOCTYPE html>
 <html lang="es">
