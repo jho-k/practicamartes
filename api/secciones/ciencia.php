@@ -1,11 +1,13 @@
 <?php
+// Aquí no hay necesidad de conexión a base de datos
+?>
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datos de Persona</title>
+    <title>Datos de la Persona</title>
     <style>
         table {
             width: 100%;
@@ -28,30 +30,25 @@
 
 <h1>Datos de la Tabla Persona</h1>
 
-<?php
-if ($resultado->num_rows > 0) {
-    // Mostrar los datos en una tabla
-    echo "<table>";
-    echo "<tr><th>ID</th><th>Nombres</th><th>Apellidos</th><th>Edad</th><th>Correo</th><th>Teléfono</th></tr>";
-
-    while($fila = $resultado->fetch_assoc()) {
-        echo "<tr>";
-        echo "<td>" . $fila["id"] . "</td>";
-        echo "<td>" . $fila["nombres"] . "</td>";
-        echo "<td>" . $fila["apellidos"] . "</td>";
-        echo "<td>" . $fila["edad"] . "</td>";
-        echo "<td>" . $fila["correo"] . "</td>";
-        echo "<td>" . $fila["telefono"] . "</td>";
-        echo "</tr>";
-    }
-    echo "</table>";
-} else {
-    echo "No hay registros en la base de datos.";
-}
-
-// Cerrar la conexión
-$conn->close();
-?>
+<!-- Aquí mostramos la tabla con datos estáticos -->
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Edad</th>
+        <th>Correo</th>
+        <th>Teléfono</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Jhostyn Valerio</td>
+        <td>Sanchez Asencio</td>
+        <td>22</td>
+        <td>jhostyn@hotmail.com</td>
+        <td>999666333</td>
+    </tr>
+</table>
 
 </body>
 </html>
