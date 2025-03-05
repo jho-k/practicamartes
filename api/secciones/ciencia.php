@@ -1,23 +1,4 @@
 <?php
-// Configuración de la conexión a la base de datos
-$host = "localhost";  // Cambia esto si usas un servidor remoto
-$usuario = "tu_usuario";  // Cambia esto con tu usuario de base de datos
-$contraseña = "tu_contraseña";  // Cambia esto con tu contraseña de base de datos
-$baseDeDatos = "personal";  // Nombre de la base de datos
-
-// Crear conexión
-$conn = new mysqli($host, $usuario, $contraseña, $baseDeDatos);
-
-// Comprobar la conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
-
-// Consultar los datos de la tabla persona
-$sql = "SELECT * FROM persona";
-$resultado = $conn->query($sql);
-
-?>
 
 <!DOCTYPE html>
 <html lang="es">
